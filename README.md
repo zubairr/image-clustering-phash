@@ -7,7 +7,7 @@
  For more details:
  *      Publication: [It's free for a reason: Exploring the ecosystem of free live streaming services] (https://zubairrafique.files.wordpress.com/2015/10/flis_ndss16.pdf)
  *      Where: Proceedings of the 23rd Network and Distributed System Security Symposium (NDSS 2016)
- *      Cite: https://distrinet.cs.kuleuven.be/research/publications/bibtex.do?publicationID=521207
+ *      Cite: [Bibtex](https://distrinet.cs.kuleuven.be/research/publications/bibtex.do?publicationID=521207)
  *      Contact: M. Zubair Rafique (rafique.zubair@gmail.com)
  *      License: See attached    
 
