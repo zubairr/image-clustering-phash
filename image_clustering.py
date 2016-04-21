@@ -77,11 +77,11 @@ def clustering(threshold):
         clusters = []
         print "Processing %s files..." %len(file_names)
         # iterating over images
-        for file in file_names:
+        for file_name in file_names:
             found_similar = False
             # reading images
             try:
-                image = Image.open(file)
+                image = Image.open(file_name)
                 image_phash = avhash(image)
             except:
                 continue
@@ -90,13 +90,13 @@ def clustering(threshold):
                # comparing clusters' candidate Phash with image phash to find match (similarity)
                if compare_avphash(cluster.candidate_phash,image_phash,threshold):
                     # adding image in this cluster
-                    cluster.add_image(file)
+                    cluster.add_image(file_name)
                     found_similar = True
                     # not looking beyond this cluster, first match hard clustering --- **mmm! 
                     break
             # no match found, creating new cluster  
             if not found_similar:
-                clusters.append(Cluster(file, image_phash))
+                clusters.append(Cluster(file_name, image_phash))
         # printing clusters
         print_clusters(clusters,threshold)
 
@@ -104,8 +104,8 @@ def list_files(images_dir):
         # reading filanmes of the images from directory
         file_names = []
         files = os.listdir(images_dir)
-        for file in files:
-            file_names.append('%s/%s' %(images_dir, file))
+        for f in files:
+            file_names.append('%s/%s' %(images_dir, f))
         return file_names
 
 def print_clusters(clusters,threshold):
