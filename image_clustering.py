@@ -23,7 +23,7 @@ IMAGE_DIR = 'images_dir'
 # clustering output file containg name of image and cluster number it belong
 RESULTS = "clusters.txt"
 # threshold value used to comapre the images
-THRESHOLD = 10 
+THRESHOLD = 0.3 
 
 
 
